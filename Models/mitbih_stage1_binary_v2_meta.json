@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-05-01T03:14:50",
+  "model_name": "mitbih_stage1_binary_v2",
+  "task": "MIT-BIH Stage 1 binary classification: Normal vs Abnormal",
+  "normal_label": 0,
+  "abnormal_label": 1,
+  "preprocessing": "z-score per beat",
+  "best_threshold_from_val": 0.7600000000000001,
+  "best_val_result": {
+    "threshold": 0.7600000000000001,
+    "accuracy": 0.9872651476214951,
+    "precision_abnormal": 0.9691067830758898,
+    "recall_abnormal": 0.9565793834935367,
+    "f1_abnormal": 0.9628023352793995,
+    "specificity_normal": 0.9936525458810542,
+    "roc_auc": 0.9976719933805945,
+    "tp": 2886,
+    "tn": 14402,
+    "fp": 92,
+    "fn": 131,
+    "confusion_matrix": [
+      [
+        14402,
+        92
+      ],
+      [
+        131,
+        2886
+      ]
+    ],
+    "classification_report": {
+      "Normal": {
+        "precision": 0.99098603178972,
+        "recall": 0.9936525458810542,
+        "f1-score": 0.9923174975023255,
+        "support": 14494.0
+      },
+      "Abnormal": {
+        "precision": 0.9691067830758898,
+        "recall": 0.9565793834935367,
+        "f1-score": 0.9628023352793995,
+        "support": 3017.0
+      },
+      "accuracy": 0.9872651476214951,
+      "macro avg": {
+        "precision": 0.9800464074328049,
+        "recall": 0.9751159646872954,
+        "f1-score": 0.9775599163908625,
+        "support": 17511.0
+      },
+      "weighted avg": {
+        "precision": 0.9872164187824889,
+        "recall": 0.9872651476214951,
+        "f1-score": 0.9872322799575498,
+        "support": 17511.0
+      }
+    }
+  },
+  "test_result_at_best_val_threshold": {
+    "threshold": 0.7600000000000001,
+    "accuracy": 0.9890370911748584,
+    "precision_abnormal": 0.9833150984682714,
+    "recall_abnormal": 0.9525702172760996,
+    "f1_abnormal": 0.9676985195154778,
+    "specificity_normal": 0.9966331824704714,
+    "roc_auc": 0.9960205232927193,
+    "tp": 3595,
+    "tn": 18057,
+    "fp": 61,
+    "fn": 179,
+    "confusion_matrix": [
+      [
+        18057,
+        61
+      ],
+      [
+        179,
+        3595
+      ]
+    ],
+    "classification_report": {
+      "Normal": {
+        "precision": 0.990184250932222,
+        "recall": 0.9966331824704714,
+        "f1-score": 0.9933982505363922,
+        "support": 18118.0
+      },
+      "Abnormal": {
+        "precision": 0.9833150984682714,
+        "recall": 0.9525702172760996,
+        "f1-score": 0.9676985195154778,
+        "support": 3774.0
+      },
+      "accuracy": 0.9890370911748584,
+      "macro avg": {
+        "precision": 0.9867496747002467,
+        "recall": 0.9746016998732855,
+        "f1-score": 0.980548385025935,
+        "support": 21892.0
+      },
+      "weighted avg": {
+        "precision": 0.9890000657778756,
+        "recall": 0.9890370911748584,
+        "f1-score": 0.9889678291553886,
+        "support": 21892.0
+      }
+    }
+  },
+  "notes": [
+    "This v2 model is trained with abnormal oversampling and focal loss.",
+    "Selection prioritizes abnormal recall >= 0.65, then abnormal F1.",
+    "Do not replace the production model unless this result is better than the old Stage 1 model."
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "created_at": "2026-05-01T08:59:47",
+  "model_name": "mitbih_stage2_subtypes_svf_v2",
+  "task": "MIT-BIH Stage 2 subtype classification: S/V/F",
+  "train_class_names": [
+    "S",
+    "V",
+    "F"
+  ],
+  "display_names": {
+    "S": "Supraventricular ectopic",
+    "V": "Ventricular ectopic",
+    "F": "Fusion beat",
+    "Q": "Unknown / low confidence"
+  },
+  "preprocessing": "z-score per beat",
+  "recommended_confidence_threshold": 0.9000000000000005,
+  "validation_known_result": {
+    "accuracy": 0.9566724436741768,
+    "macro_precision": 0.9043816418626665,
+    "macro_recall": 0.9362972248096616,
+    "macro_f1": 0.9187111231728826,
+    "weighted_precision": 0.9592096971500544,
+    "weighted_recall": 0.9566724436741768,
+    "weighted_f1": 0.9575457879447652,
+    "confusion_matrix": [
+      [
+        424,
+        15,
+        6
+      ],
+      [
+        11,
+        1118,
+        29
+      ],
+      [
+        1,
+        13,
+        114
+      ]
+    ],
+    "classification_report": {
+      "S": {
+        "precision": 0.9724770642201835,
+        "recall": 0.952808988764045,
+        "f1-score": 0.9625425652667423,
+        "support": 445.0
+      },
+      "V": {
+        "precision": 0.9755671902268761,
+        "recall": 0.9654576856649395,
+        "f1-score": 0.9704861111111112,
+        "support": 1158.0
+      },
+      "F": {
+        "precision": 0.7651006711409396,
+        "recall": 0.890625,
+        "f1-score": 0.8231046931407943,
+        "support": 128.0
+      },
+      "accuracy": 0.9566724436741768,
+      "macro avg": {
+        "precision": 0.9043816418626665,
+        "recall": 0.9362972248096616,
+        "f1-score": 0.9187111231728826,
+        "support": 1731.0
+      },
+      "weighted avg": {
+        "precision": 0.9592096971500544,
+        "recall": 0.9566724436741768,
+        "f1-score": 0.9575457879447652,
+        "support": 1731.0
+      }
+    }
+  },
+  "validation_best_rejection_result": {
+    "confidence_threshold": 0.9000000000000005,
+    "coverage": 0.755632582322357,
+    "unknown_rate": 0.24436741767764303,
+    "covered_accuracy": 0.9984709480122325,
+    "covered_macro_f1": 0.9953015427769986,
+    "covered_weighted_f1": 0.9984767918644999,
+    "covered_confusion_matrix": [
+      [
+        309,
+        0,
+        2
+      ],
+      [
+        0,
+        906,
+        0
+      ],
+      [
+        0,
+        0,
+        91
+      ]
+    ],
+    "covered_classification_report": {
+      "S": {
+        "precision": 1.0,
+        "recall": 0.9935691318327974,
+        "f1-score": 0.9967741935483871,
+        "support": 311.0
+      },
+      "V": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 906.0
+      },
+      "F": {
+        "precision": 0.978494623655914,
+        "recall": 1.0,
+        "f1-score": 0.9891304347826086,
+        "support": 91.0
+      },
+      "accuracy": 0.9984709480122325,
+      "macro avg": {
+        "precision": 0.992831541218638,
+        "recall": 0.9978563772775991,
+        "f1-score": 0.9953015427769986,
+        "support": 1308.0
+      },
+      "weighted avg": {
+        "precision": 0.998503830850679,
+        "recall": 0.9984709480122325,
+        "f1-score": 0.9984767918644999,
+        "support": 1308.0
+      }
+    }
+  },
+  "test_known_result": {
+    "accuracy": 0.9464450600184672,
+    "macro_precision": 0.8809765989312605,
+    "macro_recall": 0.9395110471884411,
+    "macro_f1": 0.9046841774713369,
+    "weighted_precision": 0.9529063224595389,
+    "weighted_recall": 0.9464450600184672,
+    "weighted_f1": 0.9482954709613126,
+    "confusion_matrix": [
+      [
+        514,
+        21,
+        21
+      ],
+      [
+        22,
+        1384,
+        42
+      ],
+      [
+        1,
+        9,
+        152
+      ]
+    ],
+    "classification_report": {
+      "S": {
+        "precision": 0.957169459962756,
+        "recall": 0.9244604316546763,
+        "f1-score": 0.9405306495882891,
+        "support": 556.0
+      },
+      "V": {
+        "precision": 0.9787835926449788,
+        "recall": 0.9558011049723757,
+        "f1-score": 0.9671558350803634,
+        "support": 1448.0
+      },
+      "F": {
+        "precision": 0.7069767441860465,
+        "recall": 0.9382716049382716,
+        "f1-score": 0.8063660477453581,
+        "support": 162.0
+      },
+      "accuracy": 0.9464450600184672,
+      "macro avg": {
+        "precision": 0.8809765989312605,
+        "recall": 0.9395110471884411,
+        "f1-score": 0.9046841774713369,
+        "support": 2166.0
+      },
+      "weighted avg": {
+        "precision": 0.9529063224595389,
+        "recall": 0.9464450600184672,
+        "f1-score": 0.9482954709613126,
+        "support": 2166.0
+      }
+    }
+  },
+  "test_rejection_result": {
+    "confidence_threshold": 0.9000000000000005,
+    "coverage": 0.7285318559556787,
+    "unknown_rate": 0.2714681440443213,
+    "covered_accuracy": 0.9923954372623575,
+    "covered_macro_f1": 0.9812502021824222,
+    "covered_weighted_f1": 0.992504954716712,
+    "covered_confusion_matrix": [
+      [
+        366,
+        1,
+        5
+      ],
+      [
+        0,
+        1083,
+        5
+      ],
+      [
+        0,
+        1,
+        117
+      ]
+    ],
+    "covered_classification_report": {
+      "S": {
+        "precision": 1.0,
+        "recall": 0.9838709677419355,
+        "f1-score": 0.991869918699187,
+        "support": 372.0
+      },
+      "V": {
+        "precision": 0.9981566820276497,
+        "recall": 0.9954044117647058,
+        "f1-score": 0.9967786470317533,
+        "support": 1088.0
+      },
+      "F": {
+        "precision": 0.9212598425196851,
+        "recall": 0.9915254237288136,
+        "f1-score": 0.9551020408163265,
+        "support": 118.0
+      },
+      "accuracy": 0.9923954372623575,
+      "macro avg": {
+        "precision": 0.9731388415157783,
+        "recall": 0.9902669344118182,
+        "f1-score": 0.9812502021824222,
+        "support": 1578.0
+      },
+      "weighted avg": {
+        "precision": 0.992841021206214,
+        "recall": 0.9923954372623575,
+        "f1-score": 0.992504954716712,
+        "support": 1578.0
+      }
+    }
+  },
+  "notes": [
+    "Stage 2 is trained only on MIT-BIH abnormal subtypes S/V/F.",
+    "The model uses oversampling, focal loss, SE blocks, and multi-kernel convolution.",
+    "Confidence rejection should be used: low-confidence predictions should be reported as Q / Unknown.",
+    "Do not replace production Stage 2 unless v2 improves macro F1 and rare-class performance."
+  ]
+}
